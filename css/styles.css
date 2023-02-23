@@ -98,6 +98,7 @@ p {
 .nav-links:focus {
   color: var(--active-color);
   cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-list {
@@ -130,6 +131,16 @@ p {
 .header-contact:hover,
 .header-contact:focus {
   fill: var(--active-color);
+  color: var(--active-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.active-page::after {
+  display: block;
+  content: "";
+  width: 50px;
+  height: 4px;
   color: var(--active-color);
 }
 
@@ -184,6 +195,7 @@ p {
 .footer-link:hover,
 .footer-link:focus {
   color: var(--active-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-icon {
@@ -201,11 +213,13 @@ p {
   border-radius: 50%;
 }
 
-.footer-icon li:hover {
+.footer-icon li:hover,
+.footer-icon li:active {
   border: 0px solid var(--active-color);
   border-radius: 50%;
   background-color: #2196f3;
   fill: var(--card-bg);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* footer end */
@@ -250,6 +264,20 @@ p {
   margin: 0 auto;
   border-radius: 4px;
   border: 0;
+}
+
+.modal {
+  height: 581px;
+  width: 528px;
+  background-color: var(--card-bg);
+  display: block;
+  margin: auto;
+}
+
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .advantages-section h3 {
@@ -301,6 +329,21 @@ p {
 
 .service-section li {
   flex-basis: calc((100%-60px) / 3);
+  position: relative;
+}
+
+.service-section p {
+  position: absolute;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--card-bg);
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%);
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 27px 0;
+  text-align: center;
 }
 
 .team-section {
@@ -363,11 +406,14 @@ p {
   padding: 12px;
 }
 
-.social-icon li:hover {
+.social-icon li:hover,
+.social-icon li:active {
   border: 0px solid var(--active-color);
   border-radius: 50%;
   background-color: #2196f3;
   fill: var(--card-bg);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-section h2 {
@@ -397,6 +443,8 @@ p {
   border-color: var(--active-color);
   fill: var(--active-color);
   cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* index end */
@@ -431,6 +479,9 @@ p {
   color: var(--text-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-section figure {
@@ -441,6 +492,7 @@ p {
 .projects-section figure:active {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-section figcaption {

@@ -29,7 +29,9 @@
           >
           <nav>
             <ul class="nav-list">
-              <li><a href="#" class="nav-links">Agencja</a></li>
+              <li>
+                <a href="./index.html" class="nav-links active-page">Agencja</a>
+              </li>
               <li>
                 <a href="./potrfolio.html" class="nav-links">Portfolio</a>
               </li>
@@ -61,7 +63,12 @@
       <section class="page-title">
         <div class="container">
           <h1 class="title">Efektywne rozwiazania dla waszego biznesu</h1>
-          <button type="button" class="main-button">Zamów usługę</button>
+          <button type="button" class="main-button" data-modal-open>
+            Zamów usługę
+          </button>
+        </div>
+        <div class="modal is-hidden" data-modal>
+          <button type="button" data-modal-close>X</button>
         </div>
       </section>
       <section class="advantages-section section">
@@ -119,18 +126,21 @@
                 src="./images/img.jpg"
                 alt="Biurko programisty z klawiaturą i tabletem"
               />
+              <p>Apliakcje komputerowe</p>
             </li>
             <li>
               <img
                 src="./images/img2.jpg"
                 alt="Stanowisko programaisty z smartfonem i laptopem"
               />
+              <p>Apliakcje mobilne</p>
             </li>
             <li>
               <img
                 src="./images/img3.jpg"
                 alt="Biurko programisty z tabletem graficznym"
               />
+              <p>Rozwiązania graficzne</p>
             </li>
           </ul>
         </div>
@@ -353,5 +363,6 @@
         </ul>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
