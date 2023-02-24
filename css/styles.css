@@ -464,8 +464,10 @@ p {
   position: fixed;
   left: 0;
   top: 0;
+  visibility: visible;
+  opacity: 1;
   transform: scale(100%);
-  transition-property: background-color, transform;
+  transition-property: visibility, opacity, transform;
   transition-duration: 100ms;
   transition-timing-function: ease;
 }
@@ -475,6 +477,9 @@ p {
   visibility: hidden;
   opacity: 0;
   transform: scale(50%);
+  transition-property: visibility, opacity, transform;
+  transition-duration: 100ms;
+  transition-timing-function: ease;
 }
 
 .modal-close {
