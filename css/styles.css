@@ -20,6 +20,7 @@
   --description-bg: rgba(33, 150, 243, 0.9);
   --service-bg: rgba(47, 48, 58, 0.8);
   --footer-icon-bg: rgba(255, 255, 255, 0.1);
+  --bg-gradient:rgba(47, 48, 58, 0.4);
 }
 
 body {
@@ -78,7 +79,7 @@ p {
   }
 
 .logo-blue {
-  color: #2196f3;
+  color: var(--active-color);
 }
 
 .nav-list {
@@ -222,7 +223,7 @@ p {
   display: flex;
   gap: 10px;
   padding: 12px;
-  fill: var(--card-bg);  
+  fill: var(--text-color);  
   background-color: var(--footer-icon-bg);
   border-radius: 50%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -241,8 +242,8 @@ p {
   background-color: var(--bg-color);
   background-image: linear-gradient(
       to top,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
+      var(--bg-gradient),
+      var(--bg-gradient)
     ),
     url(../images/bgimg.jpg);
   background-repeat: no-repeat;
@@ -407,7 +408,7 @@ p {
 .social-icon li:active {
   fill: var(--card-bg);
     border-radius: 50%;
-  background-color: #2196f3;  
+  background-color: var(--active-color);  
   
 }
 
@@ -587,7 +588,7 @@ p {
   z-index: 3;
   height: 100%;
   padding: 49px 45px 49px 24px;
-  color: var(--card-bg);
+  color: var(--text-color);
   line-height: 1.56;
   letter-spacing: 0.03em;
   font-size: 18px;
