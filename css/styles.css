@@ -491,7 +491,7 @@ p {
   font-size: 13px;
   background-color: var(--card-bg);
   border-radius: 50%;
-  border: 1px solid var(--backdrop-bg);
+  border: 1px solid var(--backdrop-color);
   cursor: pointer;
   
 }
